@@ -37,5 +37,20 @@ public class Main {
                 1,
                 "Astana, Kazakhstan"
         );
+
+
+        System.out.println("\n=== INVALID QUANTITY TEST ===");
+
+        try {
+            facade.placeOrder(
+                    "Miras",
+                    "Pizza",
+                    0,
+                    "Astana"
+            );
+        } catch (IllegalArgumentException e) {
+            System.out.println("Validation error: " + e.getMessage());
+        }
+
     }
 }
